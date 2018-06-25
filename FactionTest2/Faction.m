@@ -18,6 +18,26 @@
     numerator = n;
     denominator = d;
 }
+
+-(void) add:(Faction *) f{
+    numerator = numerator * f.denominator + denominator * f.numerator;
+    denominator = denominator * f.denominator;
+    [self reduce];
+}
+
+-(void)reduce{
+    int u=numerator;
+    int v=denominator;
+    int temp;
+    while(v!=0){
+        temp =u %v;
+        u =v;
+        v=temp;
+    }
+    
+    numerator /= u;
+    denominator /= u;
+}
 -(double) convertToNum{
     if(denominator !=0) {
         return (double) numerator/denominator;

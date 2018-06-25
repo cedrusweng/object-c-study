@@ -11,14 +11,21 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Faction *myFaction = [[Faction alloc] init];
+        Faction *aFraction = [[Faction alloc] init];
+        Faction *bFraction = [[Faction alloc] init];
         
-        [myFaction setNumerator:1];
-        [myFaction setDenominator:3];
-        [myFaction print];
+        [aFraction setTo:1 over:2];
+        [bFraction setTo:1 over:4];
         
-        [myFaction setTo:100 over:200];
-        [myFaction print];
+        [aFraction print];
+        NSLog(@"+");
+        [bFraction print];
+        NSLog(@"=");
+        
+        [aFraction add:bFraction];
+        [aFraction reduce];
+        [aFraction print];
+        
     }
     return 0;
 }

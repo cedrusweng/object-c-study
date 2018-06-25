@@ -13,4 +13,6 @@
 -(void) print;
 -(void) setTo:(int) n over:(int)d;
 -(double) convertToNum;
+-(void) reduce;
+-(void) add:(Faction *) f;
 @end
