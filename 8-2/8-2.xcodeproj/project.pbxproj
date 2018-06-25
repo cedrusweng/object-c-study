@@ -11,6 +11,7 @@
 		DEAB7C4420E0CDCB006FE880 /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB7C4320E0CDCB006FE880 /* Rectangle.m */; };
 		DEAB7C4720E0CF43006FE880 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB7C4620E0CF43006FE880 /* Square.m */; };
 		DEAB7C4A20E0D16F006FE880 /* XYPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB7C4920E0D16F006FE880 /* XYPoint.m */; };
+		DEAB7C4D20E0E933006FE880 /* GraphicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB7C4C20E0E933006FE880 /* GraphicObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		DEAB7C4620E0CF43006FE880 /* Square.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
 		DEAB7C4820E0D16F006FE880 /* XYPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPoint.h; sourceTree = "<group>"; };
 		DEAB7C4920E0D16F006FE880 /* XYPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPoint.m; sourceTree = "<group>"; };
+		DEAB7C4B20E0E933006FE880 /* GraphicObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphicObject.h; sourceTree = "<group>"; };
+		DEAB7C4C20E0E933006FE880 /* GraphicObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphicObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				DEAB7C4320E0CDCB006FE880 /* Rectangle.m */,
 				DEAB7C4520E0CF43006FE880 /* Square.h */,
 				DEAB7C4620E0CF43006FE880 /* Square.m */,
+				DEAB7C4B20E0E933006FE880 /* GraphicObject.h */,
+				DEAB7C4C20E0E933006FE880 /* GraphicObject.m */,
 			);
 			path = "8-2";
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			files = (
 				DEAB7C4720E0CF43006FE880 /* Square.m in Sources */,
 				DEAB7C3C20E0CDB7006FE880 /* main.m in Sources */,
+				DEAB7C4D20E0E933006FE880 /* GraphicObject.m in Sources */,
 				DEAB7C4420E0CDCB006FE880 /* Rectangle.m in Sources */,
 				DEAB7C4A20E0D16F006FE880 /* XYPoint.m in Sources */,
 			);
