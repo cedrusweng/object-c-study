@@ -14,5 +14,6 @@
 -(void) setTo:(int) n over:(int)d;
 -(double) convertToNum;
 -(void) reduce;
+-(Faction *) add2:(Faction *) f;
 -(void) add:(Faction *) f;
 @end

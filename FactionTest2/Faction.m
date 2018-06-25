@@ -24,7 +24,13 @@
     denominator = denominator * f.denominator;
     [self reduce];
 }
-
+-(Faction *) add2:(Faction *) f {
+    Faction *result = [[Faction alloc] init];
+    result.numerator = numerator*f.denominator+ denominator *f.numerator;
+    result.denominator = denominator * f.denominator;
+    [result reduce];
+    return result;
+}
 -(void)reduce{
     int u=numerator;
     int v=denominator;
