@@ -52,12 +52,32 @@
 -(Rectangle *) intersect:(Rectangle *)rt{
     Rectangle * result = [[Rectangle alloc] init];
     XYPoint *pt=[[XYPoint alloc] init];
-    if(origin.x + width < rt.origin.x || origin.y < rt.origin.y - rt.height){
-        [pt setX:0 andY:0];
-        [result setWidth:0 andHeight:0];
-        result.origin = pt;
-    }else{
-        [pt setX:origin.x-rt.origin.x andY:origin.y-rt.origin.y];
+    pt.x =0;
+    pt.y=0;
+    result.origin =pt;
+    if((rt.origin.x+rt.width >= origin.x && rt.origin.x<= origin.x+width) &&
+       (rt.origin.y+rt.height>=origin.y && rt.origin.y<= origin.y+height)){
+        if(rt.origin.x<=origin.x){
+            result.origin.x = origin.x;
+        }else {
+            result.origin.x=rt.origin.x;
+        }
+        if(rt.origin.y <= origin.y){
+            result.origin.y= origin.y;
+        }else {
+            result.origin.y=rt.origin.y;
+        }
+        
+        if(rt.origin.x+rt.width <= origin.x +width){
+            result.width = rt.origin.x+rt.width-result.origin.x;
+        }else{
+            result.width = origin.x+width -result.origin.x;
+        }
+        if(rt.origin.y+rt.height <= origin.y+height){
+            result.height = rt.origin.y+rt.height -result.origin.y;
+        }else {
+            result.height = origin.y+height -result.origin.y;
+        }
     }
     return result;
 }
