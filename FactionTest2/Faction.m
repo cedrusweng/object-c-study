@@ -11,7 +11,10 @@
 @implementation Faction
 @synthesize numerator,denominator;
 
--(void)print{
+-(void)print:(BOOL) reduced{
+    if (reduced){
+        [self reduce];
+    }
     NSLog(@"%i/%i",numerator,denominator);
 }
 -(void) setTo:(int)n over:(int)d{
@@ -51,4 +54,31 @@
         return NAN;
     }
 }
+
+
+-(Faction *) substract:(Faction *) f{
+    Faction * result = [[Faction alloc] init];
+    result.numerator = numerator * f.denominator - denominator * f.numerator;
+    result.denominator = denominator * f.denominator;
+    
+    [result reduce];
+    return result;
+}
+-(Faction *) multiply:(Faction *) f{
+    Faction *result = [[Faction alloc] init];
+    result.numerator = numerator * f.numerator;
+    result.denominator = denominator * f.denominator;
+    [result reduce];
+    return result;
+}
+-(Faction *) divide:(Faction *) f{
+    Faction *result = [[Faction alloc] init];
+    result.numerator = numerator * f.denominator;
+    result.denominator = denominator * f.numerator;
+    [result reduce];
+    return result;
+}
+
+
+
 @end

@@ -10,10 +10,16 @@
 
 @interface Faction : NSObject
 @property int numerator,denominator;
--(void) print;
+-(void) print:(BOOL) reduced;
 -(void) setTo:(int) n over:(int)d;
 -(double) convertToNum;
 -(void) reduce;
 -(Faction *) add2:(Faction *) f;
 -(void) add:(Faction *) f;
+
+-(Faction *) substract:(Faction *) f;
+-(Faction *) multiply:(Faction *) f;
+-(Faction *) divide:(Faction *) f;
+
+
 @end
