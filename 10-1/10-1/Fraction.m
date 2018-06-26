@@ -1,6 +1,6 @@
 //
-//  Faction.m
-//  FactionTest2
+//  Fraction.m
+//  FractionTest2
 //
 //  Created by 翁雪松 on 2018/6/25.
 //  Copyright © 2018年 cedrus.weng. All rights reserved.
@@ -8,9 +8,18 @@
 
 #import "Fraction.h"
 
-@implementation Faction
+@implementation Fraction
 @synthesize numerator,denominator;
-
+-(id) init{
+    return [self initWith:0 over:0];
+}
+-(id) initWith:(int) n over:(int)d{
+    self = [super init];
+    if(self){
+        [self setTo:n over:d];
+    }
+    return self;
+}
 -(void)print:(BOOL) reduced{
     if (reduced){
         [self reduce];
@@ -22,13 +31,13 @@
     denominator = d;
 }
 
--(void) add:(Faction *) f{
+-(void) add:(Fraction *) f{
     numerator = numerator * f.denominator + denominator * f.numerator;
     denominator = denominator * f.denominator;
     [self reduce];
 }
--(Faction *) add2:(Faction *) f {
-    Faction *result = [[Faction alloc] init];
+-(Fraction *) add2:(Fraction *) f {
+    Fraction *result = [[Fraction alloc] init];
     result.numerator = numerator*f.denominator+ denominator *f.numerator;
     result.denominator = denominator * f.denominator;
     [result reduce];
@@ -56,23 +65,23 @@
 }
 
 
--(Faction *) substract:(Faction *) f{
-    Faction * result = [[Faction alloc] init];
+-(Fraction *) substract:(Fraction *) f{
+    Fraction * result = [[Fraction alloc] init];
     result.numerator = numerator * f.denominator - denominator * f.numerator;
     result.denominator = denominator * f.denominator;
     
     [result reduce];
     return result;
 }
--(Faction *) multiply:(Faction *) f{
-    Faction *result = [[Faction alloc] init];
+-(Fraction *) multiply:(Fraction *) f{
+    Fraction *result = [[Fraction alloc] init];
     result.numerator = numerator * f.numerator;
     result.denominator = denominator * f.denominator;
     [result reduce];
     return result;
 }
--(Faction *) divide:(Faction *) f{
-    Faction *result = [[Faction alloc] init];
+-(Fraction *) divide:(Fraction *) f{
+    Fraction *result = [[Fraction alloc] init];
     result.numerator = numerator * f.denominator;
     result.denominator = denominator * f.numerator;
     [result reduce];
