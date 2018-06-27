@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%li",(long)[myNumber integerValue]);
         
         
-        if([intNumber isEqual:floatNumber] == YES){
+        if([intNumber isEqualToNumber:floatNumber] == YES){
             NSLog(@"Numbers are equal");
         }else{
             NSLog(@"Numbers are not equal");
