@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DEAB7DD520E38F62006FE880 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB7DD420E38F62006FE880 /* main.m */; };
 		DEAB7DDD20E3922B006FE880 /* AddressCard.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB7DDC20E3922B006FE880 /* AddressCard.m */; };
+		DEAB7DE020E39689006FE880 /* AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAB7DDF20E39689006FE880 /* AddressBook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		DEAB7DD420E38F62006FE880 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEAB7DDB20E3922B006FE880 /* AddressCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressCard.h; sourceTree = "<group>"; };
 		DEAB7DDC20E3922B006FE880 /* AddressCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressCard.m; sourceTree = "<group>"; };
+		DEAB7DDE20E39689006FE880 /* AddressBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBook.h; sourceTree = "<group>"; };
+		DEAB7DDF20E39689006FE880 /* AddressBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBook.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				DEAB7DD420E38F62006FE880 /* main.m */,
 				DEAB7DDB20E3922B006FE880 /* AddressCard.h */,
 				DEAB7DDC20E3922B006FE880 /* AddressCard.m */,
+				DEAB7DDE20E39689006FE880 /* AddressBook.h */,
+				DEAB7DDF20E39689006FE880 /* AddressBook.m */,
 			);
 			path = "15-8";
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAB7DE020E39689006FE880 /* AddressBook.m in Sources */,
 				DEAB7DDD20E3922B006FE880 /* AddressCard.m in Sources */,
 				DEAB7DD520E38F62006FE880 /* main.m in Sources */,
 			);

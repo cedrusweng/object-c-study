@@ -25,4 +25,13 @@
     NSLog(@"|  0           0    |");
     NSLog(@"======================");
 }
+
+
+-(BOOL) isEqual:(AddressCard *) theCard{
+    return ([_name isEqualToString:theCard.name] && [_email isEqualToString:theCard.email]);
+}
+
+-(NSComparisonResult) compareNames:(id) element{
+    return [_name compare:[element name]];
+}
 @end
